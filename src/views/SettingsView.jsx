@@ -361,6 +361,16 @@ export const SettingsView = () => {
             </button>
 
             {/* Wipe all */}
+          {/* Refresh All Data */}
+          <button
+            type="button"
+            className="btn btn-primary"
+            style={{ width: '100%', justifyContent: 'center', marginTop: '0.5rem' }}
+            onClick={() => { clearAllData(); reloadDemoData(); showToast('Data refreshed to default demo records'); }}
+          >
+            <RefreshCw size={16} />
+            <span>Refresh All Data</span>
+          </button>
             <button
               type="button"
               className="btn btn-danger"
@@ -368,7 +378,7 @@ export const SettingsView = () => {
               onClick={() => setConfirmClearOpen(true)}
             >
               <Trash2 size={16} />
-              <span>{t('wipeData')}</span>
+              <span>Refresh All Data</span>
             </button>
           </div>
         </div>
